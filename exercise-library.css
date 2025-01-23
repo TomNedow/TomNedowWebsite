@@ -1,0 +1,298 @@
+/* roots */
+:root{
+    --body-color1: #fff;
+    --body-color2: #000;
+    --main-color1: #003135;
+    --main-color2: #024950;
+    --secondary-color1: #0fa4af;
+    --secondary-color2: #964734;
+    --secondary-color3: #Afdde5;
+}
+
+body{
+    background-color: var(--body-color1);
+}
+
+/* === navbar === */ 
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--main-color1);
+    max-height: 100px;
+    width: 100%;
+}
+
+.navbar-container img {
+    height: 95px;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-links li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.navbar-links a{
+    color: var(--body-color2);
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    color: var(--body-color1);
+}
+
+.navbar-links a:hover{
+    color: var(--secondary-color1);
+    font-size: 110%;
+    transform: translateY(-5px);
+    transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5em;
+}
+
+/* General styling for the exercise card container */
+.exercise-card-container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    border: 1px solid #ccc;
+    padding: 20px; 
+    background-color: #f9f9f9;
+    border-radius: 8px; 
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+/* Styling for the video container */
+.exercise-library-video-container {
+    flex: 1; 
+    max-width: 300px; 
+    border: 2px solid black;
+}
+
+.exercise-library-video-container iframe {
+    width: 100%;
+    height: 200px; 
+    border: none; 
+}
+
+/* Styling for the text container */
+.exercise-stats {
+    flex: 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+/* Styling for the <p> elements */
+.exercise-stats p {
+    margin: 0; 
+    font-size: 16px; 
+    line-height: 1.5; 
+}
+
+.exercise-stats span {
+    font-weight: bold;
+    color: #333; 
+}
+
+.workout-btn-add-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: auto;
+}
+
+#workout-btn-add, #clear-btn{
+    background-color: var(--secondary-color2);
+    max-width: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+#workout-btn-add:hover, #clear-btn:hover{
+    opacity: 50%;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+/* Style for the search-bar container */
+.search-bar {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 10px; 
+    margin: 20px auto; 
+}
+
+/* Style for the input field */
+#search-bar {
+    width: 300px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none; 
+    background-color: #f0f0f0; 
+    transition: border-color 0.3s ease; 
+}
+
+/* Focus effect on the input */
+#search-bar:focus {
+    border-color: #888; /* Change border color to gray when focused */
+}
+
+/* Style for the search button */
+#search-exercise-btn {
+    background-color: #f0f0f0; 
+    color: #333; 
+    font-size: 16px; 
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect for the button */
+#search-exercise-btn:hover {
+    background-color: #e0e0e0; 
+}
+
+
+/* this part will be for the mini exercise cards */
+
+.exercise-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.popular-exercises{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+.exercise-slider header{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 100px;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5em;
+}
+
+.short-exercise-card {
+    background-color: var(--main-color1);
+    width: 280px; 
+    height: 450px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.short-exercise-card:hover {
+    transform: translateY(-10px); 
+}
+
+.short-exercise-card h1 {
+    font-size: 24px;
+    color: var(--body-color1);
+    margin-bottom: 10px;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
+
+.short-exercise-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color2);
+    height: 23px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    margin: 0;
+    color: black;
+    text-align: center; 
+}
+
+.popular-exercises p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-notes-section {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+.exercise-name{
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px; 
+    border: 1px solid #ccc;
+    padding: 20px; 
+    background-color: #f9f9f9;
+    border-radius: 8px; 
+    max-width: 1440px;
+    margin: auto;
+}
