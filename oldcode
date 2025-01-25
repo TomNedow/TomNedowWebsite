@@ -1,0 +1,85 @@
+html 
+
+  <!-- Workshop Container -->
+    <section class="workshops">
+        <h1>Sign Up For My Free Workshops!</h1>
+    <div class="workshop-card-container">
+        <div class="workshop-card">
+            <img src="images/WEIGHTS.jpg" alt="yoga">
+            <div class="workshop-card-content">
+                <h3>How to workout, for Dummies</h3>
+                <p>If you're not sure where to start, then this free online workshop is for you!</p>
+                <a href="#" class="card-btn">Start Now!</a>
+            </div>
+        </div>
+        <div class="workshop-card">
+            <img src="images/WEIGHTS.jpg" alt="yoga">
+            <div class="workshop-card-content">
+                <h3>How to workout, for Dummies</h3>
+                <p>If you're not sure where to start, then this free online workshop is for you!</p>
+                <a href="#" class="card-btn">Start Now!</a>
+            </div>
+        </div>
+        <div class="workshop-card">
+            <img src="images/WEIGHTS.jpg" alt="yoga">
+            <div class="workshop-card-content">
+                <h3>How to workout, for Dummies</h3>
+                <p>If you're not sure where to start, then this free online workshop is for you!</p>
+                <a href="#" class="card-btn">Start Now!</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- YouTube Videos -->
+    <section class="youtube">
+        <h1>Youtube Videos</h1>
+        <div class="youtube-card-container">
+            <div class="youtube-card">
+                <iframe 
+                width="450" 
+                height="315" 
+                src="https://www.youtube.com/embed/iOBLM35e9fg?start=11" 
+                title="What to do when you're frustrated as an athlete" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="video-card-content">
+                <h3>How to deal with frustration</h3>
+                <p>Feeling stuck or frustrated in your athletic journey? You're not alone.</p>
+            </div>
+            </div>
+            <div class="youtube-card">
+                <iframe 
+                width="450" 
+                height="315" 
+                src="https://www.youtube.com/embed/iOBLM35e9fg?start=11" 
+                title="What to do when you're frustrated as an athlete" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="video-card-content">
+                <h3>How to deal with frustration</h3>
+                <p>Feeling stuck or frustrated in your athletic journey? You're not alone.</p>
+            </div>
+            </div>
+
+            <div class="youtube-card">
+                <iframe 
+                width="450" 
+                height="315" 
+                src="https://www.youtube.com/embed/iOBLM35e9fg?start=11" 
+                title="What to do when you're frustrated as an athlete" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            <div class="video-card-content">
+                <h3>How to deal with frustration</h3>
+                <p>Feeling stuck or frustrated in your athletic journey? You're not alone.</p>
+            </div>
+            </div>
+        </div>
+    </section>
