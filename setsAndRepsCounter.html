@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="setsandreps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Sets and Reps Counter</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <div class="navbar-container">
+            <div class="navbar-links-container">
+                <div class="navbar-left">
+                    <a class="navbar-links-logo" href="homepage.html">
+                        <h1>Tom Nedow</h1>
+                    </a>
+                </div>
+                <div class="navbar-center">
+                    <ul>
+                        <li><a class="navbar-links" href="portfolio.html" target="_blank">Portfolio</a></li>
+                        <li><a class="navbar-links" href="blog.html" target="_blank">Resume</a></li>
+                        <li><a class="navbar-links" href="contact.html" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right" id="navbar-right">
+                    <form id="search-bar">
+                        <input type="text" placeholder="Search blog" id="search-input">
+                        <button type="submit" id="search-icon-btn"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!--choose exercise-->
+    <section class = "project-container">
+        <div class="chosenExercise">
+        <h1>Choose Exercise</h1>
+        <select name ="exercises" id="exercise-select">
+            <option value="bench press">Bench Press</option>
+            <option value="Squat">Squat</option>
+        </select>
+        <input type="number" placeholder="# of reps" id="reps-input">
+    </div>
+
+    <div class="timer-container">
+        <div class="timer">
+            <!--timer will go here-->
+        </div>
+        <button id="add-reps-btn">add</button>
+        <button id="reset-reps-btn">Reset</button>
+        <button id="start-set-btn">Start Set</button>
+    </div>
+   
+    <!--rep and set count maybe rest-->
+    <div id="rep-counter-container">
+        
+    </div>
+    
+</section>
+    <script src="setsandreps.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+
+
+/* Project Container Styling */
+.project-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Choose Exercise Section */
+.chosenExercise {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chosenExercise h1 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+.chosenExercise select,
+.chosenExercise input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.chosenExercise select {
+    cursor: pointer;
+}
+
+/* Timer Container */
+.timer-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.timer {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9900;
+    transform: scale(1.1);
+}
+
+/* === rep counter === */
+#rep-counter-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rep-counter-div {
+    font-size: 2rem;
+    background-color: #444;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 250px;
+}
+
+.rep-counter-div[data-reps] {
+    background-color: #28a745;
+}
+
+.rep-counter-div[data-count] {
+    background-color: #dc3545;
+}
+
+/* Apply animation only to the outer div */
+.rep-loading {
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: solid 5px red;
+    border-top: solid 5px gray;
+    animation: rep-loading 1s infinite linear;
+}
+.rep-loading-no-animation {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: solid 5px red;
+    border-top: solid 5px gray;
+}
+
+/* Animation only affects the outer circle */
+@keyframes rep-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

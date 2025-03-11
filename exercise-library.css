@@ -1,64 +1,168 @@
-/* roots */
 :root{
-    --body-color1: #fff;
+    /* ===== colors ==== */
+    --body-color1: #fdfdfd;
     --body-color2: #000;
-    --main-color1: #003135;
-    --main-color2: #024950;
-    --secondary-color1: #0fa4af;
-    --secondary-color2: #964734;
-    --secondary-color3: #Afdde5;
+    --main-color-green:#13a89e;
+    --main-color-gold:#e4c775;
+    --secondary-color-green:#03989e;
+    --secondary-color-gold:#b48e43;
+    --accessory-color-blue:#1b2a41;
+    --accessory-color-red:#e63846;
+    --neutral-color-gold: #cfd186;
+    --neutral-color-grey: #becde4;
+ 
+    
+/* === transition === */
+--tran-02: all 0.2s ease: all 0.2s ease;
+--tran-03: all 0.3s ease;
+--tran-04: all 0.4s ease;
+--tran-05: all 0.5s ease;
+
+
+
 }
 
+
+
 body{
+    margin: 0;
+    padding: 0;
     background-color: var(--body-color1);
+    color: var(--accessory-color-blue);
+    font-family: "Roboto, sans-serif";
+}
+
+section{
+    max-width: 1440px;
+    margin: auto;
 }
 
 /* === navbar === */ 
 .navbar-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--accessory-color-blue);
+}
+
+.navbar-links-container{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: var(--main-color1);
-    max-height: 100px;
-    width: 100%;
+    width: 1440px;
+    margin: auto;
+    padding: 5px;
 }
 
-.navbar-container img {
-    height: 95px;
-}
-
-.navbar-links{
+.navbar-left{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    gap: 50px;
+    padding-left: 20px;
+    max-height: 100px;
 }
 
-.navbar-links li{
+.navbar-left a{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 50px;
-    padding: 10px;
-    font-size: 1.5em;
+    justify-content: flex-start;
 }
 
-.navbar-links a{
-    color: var(--body-color2);
+
+.navbar-left img{
+    height: 75px;
+    width: auto;
+}
+.navbar-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-right: 100px;
+}
+
+.navbar-center{
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.navbar-container ul {
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
+flex-direction: row;
+}
+
+.navbar-container li {
+list-style: none;
+}
+
+
+.navbar-links{
+    position: relative;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 10px;
-    color: var(--body-color1);
+    color: var(--accessory-color-blue);
+    font-size: 1.5em;
+    padding-bottom: 5px;
 }
 
-.navbar-links a:hover{
-    color: var(--secondary-color1);
-    font-size: 110%;
-    transform: translateY(-5px);
-    transition: color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
+.navbar-links:hover{
+    color: var(--main-color-green);
+    transition: var(--tran-03);
 }
 
+.navbar-links::after{
+    position:absolute;
+    content: "";
+    height: 0%;
+    width: 0%;
+    background-color: var(--main-color-gold);
+    bottom: 0;
+    left:0;
+}
+
+.navbar-links:hover::after{
+    height: 10%;
+    width: 100%;
+    border: 50%;
+    transition: var(--tran-03);
+}
+.navbar-links-logo{
+    text-decoration: none;
+    color: var(--main-color1);
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+
+#search-icon-btn{
+   background: transparent;
+   border: none;
+   color:var(--main-color1);
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+#search-input{
+    display: none;
+    border-radius: 5px;
+    background-color: var(--main-color1);
+}
+
+
+
+/* === this is for my title */
 .title{
     display: flex;
     justify-content: center;
@@ -74,7 +178,7 @@ body{
     display: flex;
     align-items: flex-start; 
     gap: 20px; 
-    border: 1px solid #ccc;
+    border: 1px solid black;
     padding: 20px; 
     background-color: #f9f9f9;
     border-radius: 8px; 
@@ -83,11 +187,10 @@ body{
 }
 
 
-/* Styling for the video container */
 .exercise-library-video-container {
     flex: 1; 
     max-width: 300px; 
-    border: 2px solid black;
+    border: 2px solid var(--accessory-color-blue);
 }
 
 .exercise-library-video-container iframe {
@@ -96,7 +199,6 @@ body{
     border: none; 
 }
 
-/* Styling for the text container */
 .exercise-stats {
     flex: 2; 
     display: flex;
@@ -104,7 +206,6 @@ body{
     gap: 10px; 
 }
 
-/* Styling for the <p> elements */
 .exercise-stats p {
     margin: 0; 
     font-size: 16px; 
@@ -121,10 +222,11 @@ body{
     justify-content: center;
     align-items: center;
     max-width: auto;
+    gap: 50px;
 }
 
 #workout-btn-add, #clear-btn{
-    background-color: var(--secondary-color2);
+    background-color: var(--main-color-green);
     max-width: 200px;
     margin: 20px;
     border-radius: 10px;
@@ -136,12 +238,25 @@ body{
     opacity: 50%;
 }
 
-.search-bar{
+.sets-reps{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    flex-direction: row;
+    gap: 50px;
 }
+
+.sets-reps-input {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px ;
+    padding: 2px;
+    margin-left: 2px;
+    width: 50px;
+}
+
+
+
 
 /* Style for the search-bar container */
 .search-bar {
@@ -166,10 +281,9 @@ body{
 
 /* Focus effect on the input */
 #search-bar:focus {
-    border-color: #888; /* Change border color to gray when focused */
+    border-color: #888; 
 }
 
-/* Style for the search button */
 #search-exercise-btn {
     background-color: #f0f0f0; 
     color: #333; 
@@ -181,30 +295,149 @@ body{
     transition: background-color 0.3s ease; 
 }
 
-/* Hover effect for the button */
 #search-exercise-btn:hover {
     background-color: #e0e0e0; 
 }
 
 
-/* this part will be for the mini exercise cards */
+/* === Container for the entire workout program === */
+.hidden {
+    display: none;
+}
 
-.exercise-slider{
+#program-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 1000px;
+    margin: 20px auto;
+}
+#program-container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.program-container-title h1{
+    font-size: 1.5em;
+
+}
+
+.program-row-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: relative;
+}
+
+.drag-handle {
+    cursor: grab;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.program-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.sets-reps-div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
+    border: 2px dashed #555;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e9f7ff;
+    width: 150px;
 }
 
-.popular-exercises{
+.weight-program-div {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    gap: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    width: 150px;
+    font-weight: bold;
 }
-.exercise-slider header{
+
+.program-info-h1 {
+    color: var(--secondary-color2);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.program-info-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color2);
+    font-size: 0.75em;
+    height: 20px;
+    width: 100px;
+    border-radius: 30px;
+    margin: 5px 0;
+    padding: 8px;
+    color: var(--body-color1);
+}
+
+.program-info-notes {
+    font-size: 12px;
+    color: #555;
+}
+
+.program-line {
+    border: 1px solid black;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.fa-trash {
+    font-size: 13px;
+    color: red;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.draghandle {
+    cursor: grab;
+}
+
+
+/* this part will be for the mini exercise cards */
+
+.exercise-category-title{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -213,13 +446,14 @@ body{
     font-weight: 700;
     font-style: normal;
     font-size: 3.5em;
+    margin-bottom: 20px;
 }
 
 .short-exercise-card {
-    background-color: var(--main-color1);
+    background-color: var(--accessory-color-blue);
     width: 280px; 
-    height: 450px;
-    border: 2px solid black;
+    height: 500px;
+    border: 2px solid var(--body-color2);
     border-radius: 10px;
     overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -234,8 +468,8 @@ body{
 
 .short-exercise-card h1 {
     font-size: 24px;
-    color: var(--body-color1);
-    margin-bottom: 10px;
+    color: var(--main-color-gold);
+    margin-top: 1px;
 }
 
 .image-container {
@@ -257,7 +491,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color2);
+    background-color: var(--main-color-green);
     height: 23px;
     border-radius: 30px;
     margin-bottom: 10px;
@@ -269,10 +503,6 @@ body{
     text-align: center; 
 }
 
-.popular-exercises p {
-    display: flex;
-    justify-content: flex-start;
-}
 
 .card-notes-section {
     display: flex;
@@ -295,4 +525,115 @@ body{
     border-radius: 8px; 
     max-width: 1440px;
     margin: auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end; /* Align button at the bottom */
+    margin-top: 20px;
+}
+
+.workout-btn-add {
+    background-color: var(--secondary-color2);
+    color: var(--body-color1);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-btn-add:hover {
+    background-color: var(--secondary-color1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.workout-btn-add:focus {
+    outline: none;
+    border: 2px solid var(--secondary-color1);
+}
+
+.upper-body-exercises-section, .lower-body-exercises-section, .popular-exercises-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#upper-body-exercises-container, #lower-body-exercises-container, #popular-exercises-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+
+
+/*=== footer ===*/ 
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b2a41;
+    width: 100vw;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1440px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.footer-links{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-left: -40px;
+}
+.footer-links li {
+    margin-top: 8px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover {
+   color: #964734;
+   transition: var(--tran-03);
+}
+
+.links{
+    text-decoration: none;
+    color: white
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: auto;
+}
+
+.social-links{
+    text-decoration: none;
+    color: white
 }

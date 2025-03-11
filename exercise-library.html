@@ -8,23 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7e84ef1dd3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar-container">
-        <span>
-            <a href="homepage.html">
-                <img src="/images/logo.png" alt="Toms Health">
-            </a>
-        </span>
-        <header class="navbar-links-container">
-            <ul class="navbar-links">
-                <li><a href="exercise-library.html">Exercise Library</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blogs">Blog</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </header>
+    <header>
+        <div class="navbar-container">
+            <div class="navbar-links-container">
+                <div class="navbar-left">
+                    <a class = "navbar-links-logo" href="homepage.html">
+                        <img src="/TomNedowWebsite/images/AT Athlete Symbol.png">
+                    </a>
+                </div>
+                <div class="navbar-center">
+                    <ul>
+                        <li><a class = "navbar-links" href="exercise-library.html" target = "_blank">Portfolio</a></li>
+                        <li><a class = "navbar-links" href="blog.html" target = "_blank">Blog</a></li>
+                        <li><a class = "navbar-links" href="exercise-library.html" target = "_blank">Contact</a></li>
+                    </ul>
+                    </div>
+                <div class="narbar-right" id="navbar-right">
+                    <form id="search-bar">
+                        <input type="text" placeholder="" id="search-input">
+                        <button type="submit" id="search-icon-btn"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
     </nav>
     <div>
         <h1 class="title">Master Exercise Library</h1>
@@ -39,6 +51,10 @@
             <p>Exercise Type:  <span id="excercise-type"></span></p>
             <p>Modifications: <span id="modifications"></span></p>
             <p>Exercise Notes: <span id="exercise-notes"></span></p>
+            <div class="sets-reps">
+                <p>Sets: <input type="number" class="sets-reps-input"id="sets" min = "1" max = "100"></p>
+                <p>Reps: <input type="number" class="sets-reps-input"id="reps"  min = "1" max = "100"></p>
+            </div>
             <div class="workout-btn-add-container">
              <button id="workout-btn-add">Add to workout!</button>
              <button id="clear-btn">Clear</button>
@@ -59,61 +75,31 @@
         </div>
 
 <!--This is where the hidden workout page will be-->
-    <form id="exercise-form">
-        <div id="exercise-container">
-            
+    <form id="program-form" class="hidden">
+        <div id="program-container" class="hidden">
+            <div id="program-container-title" class="hidden">
+            </div>
         </div>
     </form>
 
 <!--This is where you will be able to go through and find all of the exercises-->
     </main>
 
-    <section class="exercise-slider">
-        <header>Popular Exercises</header>
-        <div class="popular-exercises">
-            <!--push up-->
-            <div class="short-exercise-card">
-                <h1>Push Up</h1>
-                <div class="image-container">
-                    <img src="images/PushupsIMG.jpg" alt="card image">
+
+        <section class ="popular-exercises-section">
+                <header class = "exercise-category-title">Popular Exercises</header>
+                <div id="popular-exercises-container">
                 </div>
-                <div class= highlight><p class="upper-body-highlight">Upper Body</p></div>
-                <div class="card-notes-section">
-                <p> start in a high plank position with your hands slightly wider than shoulder-width apart, lower your body by bending your elbows while keeping your body straight, then push back up to the starting position.</p>
-                </div>
-            </div>
-            <!--squat-->
-            <div class="short-exercise-card">
-                <h1>Squat</h1>
-                <div class="image-container">
-                    <img src="images/squat.avif " alt="card image">
-                </div>
-                <div class= highlight><p class="upper-body-highlight">Lower Body</p></div>
-                <div class="card-notes-section">
-                <p> Stand with your feet shoulder-width apart, lower your hips back and down as if sitting in a chair, keeping your chest up and knees over your toes, then push through your heels to return to standing.</p>
-                </div>
-            </div>
-            <!--pull up-->
-            <div class="short-exercise-card">
-                <h1>Push Up</h1>
-                <div class="image-container">
-                    <img src="images/pull up.jpg" alt="card image">
-                </div>
-                <div class= highlight><p class="upper-body-highlight">Upper Body</p></div>
-                <div class="card-notes-section">
-                <p> Grab a pull-up bar with your hands shoulder-width apart, engage your back and core, and pull your chin above the bar by driving your elbows down and back.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    
 
     <section class ="upper-body-exercises-section">
-        <h1>Upper Body Exercises</h1>
+        <h1 class = "exercise-category-title">Upper Body Exercises</h1>
         <div id="upper-body-exercises-container">
         </div>
     </section>
     <section class ="lower-body-exercises-section">
-        <h1>Lower Body Exercises</h1>
+        <h1 class = "exercise-category-title">Lower Body Exercises</h1>
         <div id="lower-body-exercises-container">
         </div>
     </section>
@@ -122,6 +108,46 @@
         <div id="total-body-exercises-container">
         </div>
     </section>
+    <section class ="total-body-exercises-section">
+        <h1>All Exercises</h1>
+        <div id="all-exercises-container">
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!--Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#homepage">Home</a></li>
+                    <li><a href="exercise-library.html" target="_blank">Portfolio</a></li>
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: <a class = "links" href="mailto:tommy.nedow@gmail.com">tommy.nedow@gmail.com</a></p>
+                <p>Phone: <a class = "links" href="tel:+1234567890">+1 613-340-2896</a></p>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a class = "social-links" href="https://twitter.com" target="_blank"><i class="fa-brands fa-tiktok"></i>   _healthytom_</a>
+                <a class = "social-links" href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i>   _healthytom_</a>
+                <a class = "social-links" href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i>   Tom Nedow</a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tom Nedow. All Rights Reserved.</p>
+        </div>
+    </footer>
     <script src="exercise-library.js"></script>
 </body>
 </html>

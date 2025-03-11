@@ -1,0 +1,41 @@
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.app-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 500px;
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+#input{
+    width: 350px;
+    background-color: gainsboro;
+    border: solid 1px red;
+}
+
+.task-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.task-btn{
+    gap: 20px;
+}
